@@ -13,7 +13,7 @@ df<-read.csv.sql("household_power_consumption.txt", sql="select*from file where 
 df$Time<-strptime(paste(df$Date,df$Time),"%d/%m/%Y %T")
 df$Date<-as.Date(strptime(df$Date,"%d/%m/%Y"))
 
-png('plot3.png')
+png('plot3.png', width=480, height=480))
 #ggplot(m,aes(Time,value, col=variable))+geom_line()
 
 
